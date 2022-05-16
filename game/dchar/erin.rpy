@@ -32,10 +32,15 @@ init -4 python:
     linesTalking[iC][MS_NEW_FRIEND] += [
         ("Oh, oh! Oh hey! It's you! Did you like the pizza or the burger? The Blue Fruit juice? Wait, don't tell me! You liked the plays, don't you?", "happy")]        
     linesTalking[iC][MS_NEW_FRIEND] += [
-        "By the way, there are rooms upstairs if you need a place to sleep."]       
+        "By the way, there are rooms upstairs if you need a place to sleep."]   
+    linesTalking[iC][MS_NEW_FRIEND] += [
+        ("Have I told you my name yet? I don't think I have. I think?","surprised")
+        "I'm Erin! Erin Solstice! As you can see, I own this inn.", "happy"]          
         
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("Hey! Nice day today, isn't it? I kind of want to roll down the hill to be honest.", "happy")]
+    linesTalking[iC][MS_GOOD_FRIEND] += [
+        ("I don't know if this is a fun fact, but I beat Chaldion at chess, you know?", "happy")]        
     linesTalking[iC][MS_GOOD_FRIEND] += [
         ("Want me to teach you chess?", "happy")]
     linesTalking[iC][MS_GOOD_FRIEND] += [
@@ -110,29 +115,29 @@ init -4 python:
         ("Blah blah blah blah...", "cry")]]
 
     linesTalking[iC][MS_IDIOT] += [
-        ("I don't have time for you.", "annoyed")]
+        ("Out. Shoo! Get out of my inn!", "angry")]
     linesTalking[iC][MS_IDIOT] += [
-        ("...", "annoyed")]
+        ("...", "angry")]
         
     linesTalking[iC][MS_JERK] += linesTalking[iC][MS_IDIOT]
     linesTalking[iC][MS_JERK] += [
-        ("Shouldn't you be studying, considering your grades?", "serious")]
+        ("Hey! Can you stop being a jerk?", "angry")]
         
     linesTalking[iC][MS_CREEP] += [
         ("...", "angry")]
     linesTalking[iC][MS_CREEP] += [
-        ("Stop following me around!", "angry")]
+        ("I'm calling Relc! And the Watch!", "angry")]
         
     linesTalking[iC][MS_ENEMY] += linesTalking[iC][MS_CREEP] 
     linesTalking[iC][MS_ENEMY] += [
-        ("Get out of my way, sleezebag!", "angry")]
+        ("[Minotaur Punch]!", "angry")]
         
     linesTalking[iC][MS_ARCH_ENEMY] += [
-        ("...", "grim")]
+        ("...", "angry")]
     linesTalking[iC][MS_ARCH_ENEMY] += [
-        ("I can see why your parents wouldn't love you.", "serious")]
+        ("I'm banning you from the inn.", "angry")]
     linesTalking[iC][MS_ENEMY] += [
-        ("Why do you study anyway? You will just fail, you know.", "serious")]
+        ("You're not allowed here. Get out of my inn.", "angry")]
             
         
     ##########
@@ -141,11 +146,11 @@ init -4 python:
         
         
     linesAsking[iC][MS_GOOD_FRIEND] += [[ 
-        "What kind of music do you think I like?", [
-            ("Death Metal", AL_VERY_WRONG),
-            ("Techno", AL_WRONG),  
-            ("Classic", AL_RIGHT),
-            ("Swing", AL_ALMOST_RIGHT)
+        "Do you want to guess when is my birthday?", [
+            ("No.", AL_VERY_WRONG),
+            ("Tomorrow?", AL_WRONG),  
+            ("The June 21st?", AL_RIGHT),
+            ("The Solstice?", AL_ALMOST_RIGHT)
         ]]]
     linesAsking[iC][MS_GOOD_FRIEND] += [[ 
         "Surely you memorized my favourite color?", [
@@ -179,12 +184,12 @@ init -4 python:
         
         
     linesAnswerReaction[iC][AL_VERY_WRONG] = [
-        ("Wha-?!", "shock"),
-        ("I mean: No, that is wrong.", "smile"),
+        ("Huh?!", "shocked"),
+        ("Wow... Okay.", "disappointed"),
         ("...","angry")]
-    linesAnswerReaction[iC][AL_WRONG] = [("No, that is wrong.", "smile"), ("...","sad")]
-    linesAnswerReaction[iC][AL_ALMOST_RIGHT] = ("Well, if I were to change the definitions a bit, it could be right...", "curious")
-    linesAnswerReaction[iC][AL_RIGHT] = ("That is correct.", "happy")
+    linesAnswerReaction[iC][AL_WRONG] = [("That's... That's not even close.), ("...","sad")]
+    linesAnswerReaction[iC][AL_ALMOST_RIGHT] = ("Almost there!", "HAPPY")
+    linesAnswerReaction[iC][AL_RIGHT] = ("Hey! You got it!", "happy")
     
     linesNoQuestions[iC] = ("I don't have time for more questioning.", "annoyed")
     
